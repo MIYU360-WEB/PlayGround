@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10131c">
+  <title>Ecos do Retorno — Crônicas de Astéria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Ecos do Retorno">
+        <span class="brand-mark">✦</span><span>ASTÉRIA <small>CRÔNICAS DO RETORNO</small></span>
+      </a>
+      <div class="header-center"><span class="chapter-tag"><i></i> CAPÍTULO I</span><span class="header-divider"></span><span id="header-location">Vila de Lúmen</span></div>
+      <div class="header-actions"><span class="cycle-pill"><span class="moon-icon">◐</span> CICLO <b id="cycle-count">01</b></span><button class="icon-button" id="sound-toggle" aria-label="Alternar som">♫</button></div>
+    </header>
+
+    <main class="game-layout">
+      <aside class="character-panel panel">
+        <div class="panel-heading"><div><span class="eyebrow">SEU VIAJANTE</span><h2>Personalize</h2></div><span class="edit-spark">✦</span></div>
+        <div class="avatar-stage">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="avatar-glow"></div>
+          <div id="avatar" class="avatar"></div>
+          <div class="level-badge">NÍVEL <b>01</b></div>
+        </div>
+        <label class="field-label" for="hero-name">NOME</label>
+        <input id="hero-name" class="name-input" maxlength="16" value="Aventureiro" aria-label="Nome do personagem">
+        <div class="custom-group">
+          <div class="group-title"><span>Tom de cabelo</span><span class="group-value" id="hair-name">Ébano</span></div>
+          <div class="swatches" id="hair-swatches" role="group" aria-label="Tom de cabelo"></div>
+        </div>
+        <div class="custom-group">
+          <div class="group-title"><span>Olhos</span><span class="group-value" id="eye-name">Safira</span></div>
+          <div class="swatches" id="eyes-swatches" role="group" aria-label="Cor dos olhos"></div>
+        </div>
+        <div class="custom-group">
+          <div class="group-title"><span>Manto</span><span class="group-value" id="outfit-name">Noturno</span></div>
+          <div class="swatches outfit-swatches" id="outfit-swatches" role="group" aria-label="Cor do manto"></div>
+        </div>
+        <div class="trait-card"><span class="trait-icon">⌁</span><div><b>Dom: Eco da Memória</b><small>Você se lembra de cada ciclo.</small></div></div>
+      </aside>
+
+      <section class="story-column">
+        <div class="scene panel" id="scene">
+          <div class="scene-art" aria-hidden="true"><div class="sky-glow"></div><div class="moon"></div><div class="mountains mountain-back"></div><div class="mountains mountain-front"></div><div class="village-lights"><i></i><i></i><i></i><i></i><i></i></div><div class="scene-ground"></div><div class="scene-particles"><i>✦</i><i>·</i><i>✧</i><i>·</i><i>✦</i><i>·</i></div></div>
+          <div class="scene-overlay"></div>
+          <div class="scene-content"><div class="scene-kicker"><span class="location-icon">⌖</span><span id="scene-location">VILA DE LÚMEN</span><span class="scene-kicker-line"></span><span id="scene-time">CREPÚSCULO</span></div><div class="scene-copy"><span class="chapter-number" id="chapter-number">01 <i>/ 04</i></span><h1 id="scene-title">Uma noite<br>fora do tempo</h1><p id="scene-description">O sino da vila toca treze vezes. No alto da colina, uma luz azul corta o céu — e algo dentro de você reconhece aquele presságio.</p></div><div class="scene-footer"><span><i class="pulse-dot"></i> <span id="scene-status">O destino aguarda sua escolha</span></span><span class="scroll-hint">UMA HISTÓRIA DE ESCOLHAS <b>↓</b></span></div></div>
+          <div class="scene-decoration">ASTÉRIA <span>✦</span> 07</div>
+        </div>
+
+        <div class="narrative-panel panel">
+          <div class="narrative-top"><div class="speaker"><span class="speaker-icon" id="speaker-icon">✧</span><div><b id="speaker-name">Uma voz no vento</b><small id="speaker-caption">SUSSURRO</small></div></div><span class="memory-counter"><span>◈</span> MEMÓRIAS <b id="memory-count">0</b></span></div>
+          <p class="dialogue" id="dialogue">“Quando a estrela cair, não siga a luz. Procure a pessoa que não projeta sombra.” A voz desaparece antes que você consiga responder.</p>
+          <div class="choice-list" id="choice-list"></div>
+          <div class="memory-note" id="memory-note" hidden><span>✦</span><p></p></div>
+        </div>
+        <div class="status-row"><div class="status-chip"><span class="status-icon heart">♥</span><div><small>VITALIDADE</small><div class="meter"><i id="health-meter"></i></div></div><b id="health-value">100</b></div><div class="status-chip"><span class="status-icon mana">✧</span><div><small>RESSONÂNCIA</small><div class="meter mana-meter"><i id="mana-meter"></i></div></div><b id="mana-value">35</b></div><div class="status-note"><span>✦</span> <span id="status-hint">Toda escolha deixa um eco.</span></div></div>
+      </section>
+
+      <aside class="journal-panel panel">
+        <div class="panel-heading journal-heading"><div><span class="eyebrow">ANOTAÇÕES</span><h2>Seu diário</h2></div><span class="journal-icon">▤</span></div>
+        <div class="journal-intro">Fragmentos que sobrevivem ao fim.</div>
+        <div class="journal-progress"><div class="progress-label"><span>CAMINHO DESCOBERTO</span><b id="progress-label">0%</b></div><div class="progress-track"><i id="progress-bar"></i></div></div>
+        <div class="journal-list" id="journal-list"></div>
+        <div class="journal-bottom"><div class="quote-mark">“</div><p>O fim nunca é o fim<br>para quem se lembra.</p><span>— CADERNO DO VIAJANTE</span></div>
+        <button id="restart-button" class="restart-button" title="Recomeçar a história">↺ <span>Recomeçar história</span></button>
+      </aside>
+    </main>
+    <footer class="site-footer"><span>✦ ASTÉRIA</span><span>Uma fantasia sobre escolhas, coragem e recomeços.</span><span class="footer-right">PROGRESSO SALVO AUTOMATICAMENTE</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
